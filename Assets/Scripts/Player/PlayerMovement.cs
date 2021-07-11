@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     Vector2 movement;
 
+    
+
     // Animator variables + objects
     public Animator animator;
     public SpriteRenderer spriteRenderer;

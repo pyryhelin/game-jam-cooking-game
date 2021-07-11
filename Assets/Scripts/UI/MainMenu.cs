@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
     //Loads the next scene in the queue
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("kitchen");
     }
 
     //Exits game

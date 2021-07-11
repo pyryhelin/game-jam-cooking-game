@@ -5,11 +5,14 @@ using UnityEngine;
 // Abstract parent class for all interactable objects. Requires a box collider (trigger) to use
 
 [RequireComponent(typeof(BoxCollider2D))]
-public abstract class Interactable : MonoBehaviour
-{
+
+
+//inherit the ObjectBaseclass: if an object is interacatable it must be also and object :D
+public abstract class Interactable : ObjectBaseclass
+{   
     private void Reset()
     {
-        GetComponent<BoxCollider2D>().isTrigger = true;
+        //GetComponent<BoxCollider2D>().isTrigger = true;
     }
 
     // To override in the child class with functionality
@@ -17,7 +20,7 @@ public abstract class Interactable : MonoBehaviour
 
 
     // Set active interactive icon when enter collider from player controller
-    private void OnTriggerEnter2D(Collider2D collision)
+    public virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
         {
@@ -26,8 +29,9 @@ public abstract class Interactable : MonoBehaviour
     }
 
     // Set active interactive icon when enter collider from player controller
-    private void OnTriggerExit2D(Collider2D collision)
+    public virtual void OnTriggerExit2D(Collider2D collision)
     {
+       
         if(collision.CompareTag("Player"))
         {
             collision.GetComponent<PlayerController>().CloseInteracterableIcon();

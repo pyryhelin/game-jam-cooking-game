@@ -13,12 +13,13 @@ public class PlayerController : MonoBehaviour
     public GameObject interactIcon;
     private Vector2 boxSize = new Vector2(0.1f, 1f); // basically only lets player interact with objects to the front, might need to change
 
+    public KeyCode interactionKey;
 
     void Update()
     {
         // Guess we can make a different checkInteraction thing if we need
         // slightly different button input for different things
-        if(Input.GetKeyDown(KeyCode.J))
+        if(Input.GetKeyDown(interactionKey))
         {
             CheckInteraction();
         }
@@ -51,5 +52,7 @@ public class PlayerController : MonoBehaviour
         }
         
     }
+
+
 
 }

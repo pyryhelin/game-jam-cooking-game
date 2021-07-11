@@ -564,6 +564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactIcon: {fileID: 167427749}
+  interactionKey: 0
 --- !u!1 &738485518
 GameObject:
   m_ObjectHideFlags: 0
