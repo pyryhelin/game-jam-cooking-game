@@ -10,6 +10,8 @@ public class PlayerRenderLayer : MonoBehaviour
     private SpriteRenderer sp;
     private SceneObjectManager som;
     private Vector3 pos;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,7 @@ public class PlayerRenderLayer : MonoBehaviour
         pos = gameObject.transform.position;
     }
 
+
     // Update is called once per frame
     void Update()
     {
@@ -29,13 +32,16 @@ public class PlayerRenderLayer : MonoBehaviour
         pos = transform.position;
     }
 
+
     void recalculateDrawingLayers(){
         float playerSize = sp.sprite.rect.y / 2;
         float playerTruePos = transform.position.y + playerSize;
         GameObject[] objects = som.objectsOnScreen.ToArray();
+
         for(int i = 0; i < objects.Length; i++){
                 GameObject tempObj = objects[i];
                 SpriteRenderer tempSR = tempObj.GetComponent<SpriteRenderer>();
+                
                 if(tempSR.sprite.rect.y + tempObj.transform.position.y >= playerTruePos)
                     tempSR.sortingOrder = -1;
                 else
