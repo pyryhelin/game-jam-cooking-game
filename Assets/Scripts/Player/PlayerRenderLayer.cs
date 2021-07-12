@@ -18,7 +18,6 @@ public class PlayerRenderLayer : MonoBehaviour
         sceneManager = GameObject.Find("sceneObjectManager");
         som = sceneManager.GetComponent<SceneObjectManager>();          
         sp = gameObject.GetComponent<SpriteRenderer>();
-        Debug.Log(sp);
         pos = gameObject.transform.position;
     }
 
