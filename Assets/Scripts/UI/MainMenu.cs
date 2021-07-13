@@ -5,11 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+
+    void Start(){
+        OwnSceneManager.Start(OwnSceneManager.SceneType.MainMenu);
+
+    }
     
     //Loads the next scene in the queue
     public void PlayGame()
     {
-        SceneManager.LoadScene("kitchen");
+        OwnSceneManager.LoadMainGame();
     }
 
     //Exits game

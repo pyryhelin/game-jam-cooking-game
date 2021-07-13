@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
 
     
     private void Start() {
-        //add reference to the variable manager, its now easier to reference this instance from everywhere
+        //add reference to the variable manager, its now easier to reference the player instance from everywhere
         KitchenSceneObjectReferences.player = gameObject;
     }
 

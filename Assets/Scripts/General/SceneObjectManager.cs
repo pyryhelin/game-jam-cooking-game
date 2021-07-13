@@ -12,7 +12,6 @@ public class SceneObjectManager : MonoBehaviour
     }
 
     void Start(){
-        OwnSceneManager.Start();
     }
 
 }
