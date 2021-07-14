@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Stove : Interactable
 {
+    
     public bool isOn = false;
     
     public void StartUsing()
@@ -20,6 +21,8 @@ public class Stove : Interactable
 
     public override void Interact()
     {
+
+        OwnSceneManager.LoadMinigame("TestEmptyScene");
         if(isOn)
         {
             isOn = !isOn;
@@ -35,6 +38,7 @@ public class Stove : Interactable
     public override void OnTriggerEnter2D(Collider2D collision)
     {
         base.OnTriggerEnter2D(collision);
+
     }
 
 }

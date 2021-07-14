@@ -11,6 +11,7 @@ public abstract class ObjectBaseclass : MonoBehaviour
 {   
 
     
+    
     private SceneObjectManager som;
     
     //virtual keyword makes it possible to ovedrride in a class that inheritrs this baseclass
