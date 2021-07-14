@@ -5,12 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-
-    void Start(){
-        OwnSceneManager.Start(OwnSceneManager.SceneType.MainMenu);
-
-    }
-    
+       
     //Loads the next scene in the queue
     public void PlayGame()
     {
@@ -21,7 +16,9 @@ public class MainMenu : MonoBehaviour
     public void ExitGame()
     {
         Debug.Log("Exit");
+        SettingsData.SaveSettings();
         Application.Quit();
     }
 
+    
 }

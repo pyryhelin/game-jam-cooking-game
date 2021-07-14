@@ -26,6 +26,7 @@ public static class OwnSceneManager
 
 
     //variables to keep track of past, current, and future scenes. Used for scene loading. 
+    //should be self explanatory
     private static SceneType unloadedSceneType;
     public static SceneType activeSceneType;
     private static bool setNextSceneAsActive = false;
@@ -73,7 +74,8 @@ public static class OwnSceneManager
         //add scene and its type to the activeScenes dictionary.
         activeScenes.Add(scene, nextSceneType);
 
-        //
+        //define custom functionality for each type of scene loading
+        //executes after the scene has been loaded
         switch (nextSceneType)
         {
             case SceneType.Minigame:
@@ -147,16 +149,31 @@ public static class OwnSceneManager
     public static void ExitMinigame()
     {
         UnloadCurrentScene();
+        
     }
 
 
-    public static void LoadMainGame(){
-        if(!currentlyLoading){
-            nextSceneType = SceneType.Main;
-            setNextSceneAsActive = true;
-            currentlyLoading = true;
-            LoadSceneByName("KitchenModular", LoadSceneMode.Single);
-        }
-
+    public static void LoadMainGame()
+    {
+        if (currentlyLoading)
+            return;
+        
+        nextSceneType = SceneType.Main;
+        setNextSceneAsActive = true;
+        currentlyLoading = true;
+        LoadSceneByName("KitchenModular", LoadSceneMode.Single);
     }
+
+    public static void LoadMainMenu(){
+        
+        
+        if(currentlyLoading)
+            return;
+        
+        currentlyLoading = true;
+        nextSceneType = SceneType.MainMenu;
+        setNextSceneAsActive = true;
+        LoadSceneByName("Menu", LoadSceneMode.Single);
+    }
+
 }
