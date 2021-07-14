@@ -5,18 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    
+       
     //Loads the next scene in the queue
     public void PlayGame()
     {
-        SceneManager.LoadScene("kitchen");
+        OwnSceneManager.LoadMainGame();
     }
 
     //Exits game
     public void ExitGame()
     {
         Debug.Log("Exit");
+        SettingsData.SaveSettings();
         Application.Quit();
     }
 
+    
 }

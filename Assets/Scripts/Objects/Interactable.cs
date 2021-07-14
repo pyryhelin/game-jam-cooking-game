@@ -10,18 +10,25 @@ using UnityEngine;
 //inherit the ObjectBaseclass: if an object is interacatable it must be also and object :D
 public abstract class Interactable : ObjectBaseclass
 {   
+
+    public bool isInteractable = true;
     private void Reset()
     {
         //GetComponent<BoxCollider2D>().isTrigger = true;
     }
 
     // To override in the child class with functionality
-    public abstract void Interact();
+    public virtual void Interact(){
+        if(!isInteractable)
+            return;
+    }
 
 
     // Set active interactive icon when enter collider from player controller
     public virtual void OnTriggerEnter2D(Collider2D collision)
-    {
+    {   
+        if(!isInteractable)
+            return;
         if(collision.CompareTag("Player"))
         {
             collision.GetComponent<PlayerController>().OpenInteracterableIcon();
@@ -35,7 +42,8 @@ public abstract class Interactable : ObjectBaseclass
     // Set active interactive icon when enter collider from player controller
     public virtual void OnTriggerExit2D(Collider2D collision)
     {
-       
+       if(!isInteractable)
+            return;
         if(collision.CompareTag("Player"))
         {
             collision.GetComponent<PlayerController>().CloseInteracterableIcon();

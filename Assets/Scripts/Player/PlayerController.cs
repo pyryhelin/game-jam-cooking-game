@@ -15,6 +15,13 @@ public class PlayerController : MonoBehaviour
 
     public KeyCode interactionKey;
 
+    
+    private void Start() {
+        //add reference to the variable manager, its now easier to reference the player instance from everywhere
+        KitchenSceneObjectReferences.player = gameObject;
+    }
+
+
     void Update()
     {
         // Guess we can make a different checkInteraction thing if we need
