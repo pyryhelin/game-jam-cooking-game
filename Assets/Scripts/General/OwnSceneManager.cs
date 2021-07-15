@@ -42,10 +42,11 @@ public static class OwnSceneManager
     {
 
         activeSceneType = currentScene;
-        activeScenes.Add(SceneManager.GetActiveScene(), activeSceneType);
+        //activeScenes.Add(SceneManager.GetActiveScene(), activeSceneType);
         //add event listeners "OnSceneLoad" for scene laoding and "OnSceneUnload for unloading
         SceneManager.sceneLoaded += OnSceneLoad;
         SceneManager.sceneUnloaded += OnSceneUnload;
+        VariableManager.gameLoaded = true;
     }
 
 

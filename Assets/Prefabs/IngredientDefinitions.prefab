@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3993734679143151584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7266941158701046731}
+  - component: {fileID: 2101955474553466333}
+  m_Layer: 0
+  m_Name: IngredientDefinitions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7266941158701046731
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3993734679143151584}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2101955474553466333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3993734679143151584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64cb98ecaf8501041b70e00b008aa560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localIngredients:
+  - Icon: {fileID: 21300000, guid: a01b76cd263e2a244b6c1ae0ffd05616, type: 3}
+    HasSpawanblePrefab: 1
+    SpawnablePrefab: {fileID: 7740507999130390318, guid: a93b9ee1027ed4744abb869273187556, type: 3}
+    Name: Top Bun
+    Type: 0
+    Cookable: 0
+    CookTime: 0
+    Slicable: 0
+    NumberOfSlices: 0
+    SliceAmountVariance: 0
+    Quality: 0
+  - Icon: {fileID: 21300000, guid: 4ff29a93ba2fb594d9e0a47fcb36844d, type: 3}
+    HasSpawanblePrefab: 1
+    SpawnablePrefab: {fileID: 3866132578695194845, guid: 5103d3f39c236bd439667e3bbb125bbb, type: 3}
+    Name: Bottom Bun
+    Type: 1
+    Cookable: 0
+    CookTime: 0
+    Slicable: 0
+    NumberOfSlices: 0
+    SliceAmountVariance: 0
+    Quality: 0
+  - Icon: {fileID: 21300000, guid: 6dbea3a87c09dbd4e999a95928b42273, type: 3}
+    HasSpawanblePrefab: 1
+    SpawnablePrefab: {fileID: 5118583260213963898, guid: ce56c9b6ab7e2d4418f88ecdc5a8c0df, type: 3}
+    Name: 
+    Type: 2
+    Cookable: 1
+    CookTime: 30
+    Slicable: 0
+    NumberOfSlices: 0
+    SliceAmountVariance: 0
+    Quality: 0

@@ -32,6 +32,22 @@ public static class VariableManager
             Example = value;
         }
     }
+    
+    private static bool GameLoaded;
+    public static bool gameLoaded
+    {
+        get
+        {
+            return GameLoaded;
+        }
+        set
+        {
+            //can add validation code such as:
+            //if(value > 1)
+            //  example = value;
+            GameLoaded = value;
+        }
+    }
 }
 
 
@@ -54,6 +70,8 @@ public static class PlayerStats
             Position = value;
         }
     }
+
+
 }
 
 public static class KitchenSceneObjectReferences{
@@ -84,9 +102,32 @@ public static class KitchenSceneObjectReferences{
             Camera = value;
         }
     }
+
+    private static Ingredients Ingredients;
+
+    public static Ingredients ingredients{
+        get{
+            return Ingredients;
+        }
+        set{
+            Ingredients = value;
+        }
+
+    }
+
+
 }
 
+public static class IngredientStore{
+    public static Ingredient getNewIngredientType(IngredientType type){
+            
+            return KitchenSceneObjectReferences.ingredients.ingredients[type].GetCopyOfCurrent();
 
+        }
+
+
+
+}
 
 
 [Serializable]
