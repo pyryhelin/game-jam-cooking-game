@@ -105,7 +105,8 @@ public static class PlayerStats
 
     public static Ingredient GetSelectedSoltIngredient(){
 
-        
+        if(inventory.Count >= selectedSlot)
+            return null;
         GeneralItem item = inventory[selectedSlot];
         if(item.GetType() != typeof(Ingredient))
         {
@@ -113,7 +114,7 @@ public static class PlayerStats
         }
         Ingredient ing = (Ingredient)item;
         inventory.RemoveAt(selectedSlot);
-        if(inventory.Count < selectedSlot+1)
+        if(inventory.Count < selectedSlot+1 && inventory.Count != 0)
         {
             selectedSlot = inventory.Count - 1;
         }

@@ -6,6 +6,9 @@ using System.Reflection;
 
 public class Burger : GeneralItem {
 
-    public List<Ingredient> BurgerInredients = new List<Ingredient>();
+    public List<Ingredient> burgerInredients = new List<Ingredient>();
 
+    public GameObject burgerObject = new GameObject();
+
+    public string name;
 }

@@ -13,17 +13,16 @@ public class AssemblyMinigame : MonoBehaviour
     public KeyCode startKey;
     public KeyCode dropKey;
 
+    public KeyCode finishBurger;
     private bool gameStarted = false;
+
+    private GameObject burgerObjct;
+    Burger burger;
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(sceneCanvas.GetComponent<RectTransform>().rect.height);
-        Debug.Log(sceneCanvas.GetComponent<RectTransform>().rect.width);
-        /*
-        ingredients.Add(IngredientStore.getNewIngredientType(IngredientType.BottomBun));
-        ingredients.Add(IngredientStore.getNewIngredientType(IngredientType.Patty));
-        ingredients.Add(IngredientStore.getNewIngredientType(IngredientType.TopBun));
-        ingArr = ingredients.ToArray();*/
+        burger = new Burger();
+        burger.name = "Ass";
     }
 
 
@@ -36,16 +35,21 @@ public class AssemblyMinigame : MonoBehaviour
             return;}
         
         if(Input.GetKeyDown(dropKey)){
-            Ingredient spawnable = PlayerStats.GetSelectedSoltIngredient();
-            if(spawnable == null)
-                return;
-            Instantiate(spawnable.spawnablePrefab, new Vector3(0,0,11), new Quaternion(0,0,0,0));
+            
         }
 
     }
 
     private void GameStart(){
         gameStarted = true;
+    }
+
+    private void GetNextDroppable(){
+        Ingredient spawnable = PlayerStats.GetSelectedSoltIngredient();
+            if(spawnable == null)
+                return;
+
+        GameObject ing =  Instantiate(spawnable.spawnablePrefab, new Vector3(0,0,11), new Quaternion(0,0,0,0));
     }
 
 }
