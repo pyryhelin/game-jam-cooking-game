@@ -19,11 +19,11 @@ public class AssemblyMinigame : MonoBehaviour
     {
         Debug.Log(sceneCanvas.GetComponent<RectTransform>().rect.height);
         Debug.Log(sceneCanvas.GetComponent<RectTransform>().rect.width);
-
+        /*
         ingredients.Add(IngredientStore.getNewIngredientType(IngredientType.BottomBun));
         ingredients.Add(IngredientStore.getNewIngredientType(IngredientType.Patty));
         ingredients.Add(IngredientStore.getNewIngredientType(IngredientType.TopBun));
-        ingArr = ingredients.ToArray();
+        ingArr = ingredients.ToArray();*/
     }
 
 
@@ -36,8 +36,10 @@ public class AssemblyMinigame : MonoBehaviour
             return;}
         
         if(Input.GetKeyDown(dropKey)){
-            Instantiate(ingredients[0].spawnablePrefab, new Vector3(0,0,11), new Quaternion(0,0,0,0));
-            ingredients.RemoveAt(0);
+            Ingredient spawnable = PlayerStats.GetSelectedSoltIngredient();
+            if(spawnable == null)
+                return;
+            Instantiate(spawnable.spawnablePrefab, new Vector3(0,0,11), new Quaternion(0,0,0,0));
         }
 
     }

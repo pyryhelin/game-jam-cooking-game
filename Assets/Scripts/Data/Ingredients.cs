@@ -33,7 +33,7 @@ public class Ingredients : MonoBehaviour
 
 //define the possible properties ingredients.
 [Serializable]
-public class Ingredient
+public class Ingredient : GeneralItem
 {
     [SerializeField]
     private Sprite Icon;
@@ -97,6 +97,10 @@ public class Ingredient
     [SerializeField]
     private float Quality;
     public float quality { get { return Quality; } set { Quality = value; } }
+
+    public void SaveToStorage(){
+        IngredientStore.sotredIngredients[this.type].Add(this);
+    }
 
     public Ingredient GetCopyOfCurrent()
     {

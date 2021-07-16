@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 using System.Reflection;
 
-public class Burger {
+public class Burger : GeneralItem {
 
     public List<Ingredient> BurgerInredients = new List<Ingredient>();
 

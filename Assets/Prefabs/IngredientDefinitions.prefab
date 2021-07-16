@@ -40,21 +40,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3993734679143151584}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64cb98ecaf8501041b70e00b008aa560, type: 3}
+  m_Script: {fileID: 11500000, guid: 157768005e7400f4b8241fb94fa4c6cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   localIngredients:
-  - Icon: {fileID: 21300000, guid: a01b76cd263e2a244b6c1ae0ffd05616, type: 3}
-    HasSpawanblePrefab: 1
-    SpawnablePrefab: {fileID: 7740507999130390318, guid: a93b9ee1027ed4744abb869273187556, type: 3}
-    Name: Top Bun
-    Type: 0
-    Cookable: 0
-    CookTime: 0
-    Slicable: 0
-    NumberOfSlices: 0
-    SliceAmountVariance: 0
-    Quality: 0
   - Icon: {fileID: 21300000, guid: 4ff29a93ba2fb594d9e0a47fcb36844d, type: 3}
     HasSpawanblePrefab: 1
     SpawnablePrefab: {fileID: 3866132578695194845, guid: 5103d3f39c236bd439667e3bbb125bbb, type: 3}
@@ -69,10 +58,21 @@ MonoBehaviour:
   - Icon: {fileID: 21300000, guid: 6dbea3a87c09dbd4e999a95928b42273, type: 3}
     HasSpawanblePrefab: 1
     SpawnablePrefab: {fileID: 5118583260213963898, guid: ce56c9b6ab7e2d4418f88ecdc5a8c0df, type: 3}
-    Name: 
+    Name: Patty
     Type: 2
     Cookable: 1
     CookTime: 30
+    Slicable: 0
+    NumberOfSlices: 0
+    SliceAmountVariance: 0
+    Quality: 0
+  - Icon: {fileID: 21300000, guid: a01b76cd263e2a244b6c1ae0ffd05616, type: 3}
+    HasSpawanblePrefab: 1
+    SpawnablePrefab: {fileID: 7740507999130390318, guid: a93b9ee1027ed4744abb869273187556, type: 3}
+    Name: Top bun
+    Type: 0
+    Cookable: 0
+    CookTime: 0
     Slicable: 0
     NumberOfSlices: 0
     SliceAmountVariance: 0
