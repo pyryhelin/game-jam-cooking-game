@@ -33,10 +33,6 @@ public abstract class Interactable : ObjectBaseclass
         {
             collision.GetComponent<PlayerController>().OpenInteracterableIcon();
         }
-        /*else if(collision.CompareTag("CuttingMinigame"))
-        {
-            collision.GetComponent<PlayerKnifeController>().OpenInteracterableIcon();
-        }*/
     }
 
     // Set active interactive icon when enter collider from player controller
@@ -48,10 +44,6 @@ public abstract class Interactable : ObjectBaseclass
         {
             collision.GetComponent<PlayerController>().CloseInteracterableIcon();
         }
-        /*else if(collision.CompareTag("CuttingMinigame"))
-        {
-            collision.GetComponent<PlayerKnifeController>().OpenInteracterableIcon();
-        }*/
     }
 
 }
