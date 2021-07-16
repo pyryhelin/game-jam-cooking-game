@@ -10,5 +10,4 @@ public class CameraController : MonoBehaviour
         KitchenSceneObjectReferences.camera = gameObject;
     }
 
-
 }

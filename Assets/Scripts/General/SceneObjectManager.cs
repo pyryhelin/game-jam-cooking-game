@@ -9,7 +9,9 @@ public class SceneObjectManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake(){
         objectsOnScreen = new List<GameObject>();
-    }
+        if(!VariableManager.gameLoaded)
+            OwnSceneManager.Start(OwnSceneManager.SceneType.Main);
+    }   
 
     void Start(){
     }
