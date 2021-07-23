@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8515544320915038974}
   - component: {fileID: 8721592462161477299}
   - component: {fileID: 4231508823828658400}
+  - component: {fileID: 4793212160191392590}
   m_Layer: 0
   m_Name: Cut Line
   m_TagString: Untagged
@@ -110,3 +111,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &4793212160191392590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686694230092500622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 419eb0065f3c8420caec04966853f0fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteractable: 1
